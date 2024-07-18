@@ -113,13 +113,13 @@
             <span class="author-block">
               <a href="">Minh Luu</a><sup>1,*</sup>,</span>
             <span class="author-block">
-              <a href="">Phong Ha Nguyen</a><sup>1</sup>,
+              <a href="https://phongnhhn.info/">Phong Ha Nguyen</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="">Khoi Nguyen</a><sup>1</sup>,
+              <a href="https://www.khoinguyen.org/">Khoi Nguyen</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="">Binh-Son Hua</a><sup>2</sup>
+              <a href="https://sonhua.github.io/">Binh-Son Hua</a><sup>2</sup>
             </span>
           </div>
 
@@ -135,7 +135,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="" 
+                <a href="./DiverseDream.pdf" 
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -144,7 +144,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href=""
+                <a href="https://arxiv.org/abs/2312.02192v2"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -226,11 +226,14 @@
   <div class="column is-four-fifths">
     <h2 class="title is-3">Pipeline Method</h2>
     <div class="publication-video">
-      <img src="./static/figures/pipeline.png" alt="DiverseDream pipeline" style="width:100%; height:auto;">
+      <img src="./static/figures/pipeline.png" alt="DiverseDream pipeline">
     </div>
     <div class="content has-text-justified">
       <p>
-        We translate the diversity of augmented text prompts to the resulting 3D models via a two-stage method. <b>Stage 1: HiPer tokens inversion</b> (left): for each reference image, we seek to learn a HiPer token $h_i$ so that the prompt $[y; h_i]$ reconstructs the reference image.
+        We translate the diversity of augmented text prompts to the resulting 3D models via a two-stage method.
+        <br>
+        <b>Stage 1: HiPer tokens inversion</b> (left): for each reference image, we seek to learn a HiPer token $h_i$ so that the prompt $[y; h_i]$ reconstructs the reference image.
+        <br>
         <b>Stage 2: Textual score distillation</b> (right): we run a multi-particle variational inference for optimizing the 3D models from text prompt $y$. For each iteration in the optimization, we randomly sample a particle $\theta_i$ with its rendered image $x_i$. We use the augmented text prompt $y'_i = [y; h^*_i;\phi]$, with $\phi$ as shared embedding to condition the optimization of $\theta_i$. 
         These two are taken as input to a pretrained Stable Diffusion to compute the TSD loss and MSE loss to update the NeRF and shared learnable token $\phi$ iteratively.
       </p>
@@ -363,7 +366,12 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>Updated
+    <pre><code>@inproceedings{DiverseDream,
+      title={Diverse Text-to-3D Synthesis with Augmented Text Embedding}, 
+      author={Uy Dieu Tran, Minh Luu, Phong Ha Nguyen, Khoi Nguyen, Binh-Son Hua},
+      year={2024},
+      booktitle={ECCV},
+  }
     </code></pre>
   </div>
 </section>
