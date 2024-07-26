@@ -1,4 +1,5 @@
-# DiverseDream
+# DiverseDream: Diverse Text-to-3D Synthesis with Augmented Text Embedding(ECCV 2024)
+[Project page](https://diversedream.github.io/)
 
 This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
 
